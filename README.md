@@ -1,3 +1,5 @@
+[![PyPI](https://img.shields.io/pypi/v/cloud-scanner.svg)](https://pypi.org/project/cloud-scanner/)
+
 # Cloud Scanner
 
 [![Build Status](https://dev.azure.com/ethomson/cloud-scanner/_apis/build/status/ethomson.cloud-scanner-build?branchName=master)](https://dev.azure.com/ethomson/cloud-scanner/_build/latest?definitionId=72&branchName=master)
