@@ -21,6 +21,9 @@ class CloudConfigGenerator:
         """
         providers = []
 
+        types = [{
+                    "typeName": resource_type
+                } for resource_type in resource_types]
         for provider_type in providers_types:
             account_service = AccountServiceFactory.create(provider_type)
             accounts = []
@@ -28,12 +31,6 @@ class CloudConfigGenerator:
                 accounts.append({
                     "subscriptionId": account["subscriptionId"],
                     "displayName": account["displayName"]
-                })
-
-            types = []
-            for resource_type in resource_types:
-                types.append({
-                    "typeName": resource_type
                 })
 
             providers.append({

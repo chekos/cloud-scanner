@@ -52,8 +52,7 @@ class IntegrationTest(unittest.TestCase):
             'typeName': resource_type
         }
         task_string = json.dumps(dummy_task)
-        msg = FakeQueueMessage(bytes(task_string, 'utf-8'))
-        return msg
+        return FakeQueueMessage(bytes(task_string, 'utf-8'))
 
     def scan_resource_test(self, task_msg):
         result_messages = []

@@ -9,7 +9,7 @@ class TableStorageSimulator(TableStorage):
     """Simulator of TableStorage service."""
 
     def __init__(self):
-        self._data = dict()
+        self._data = {}
 
         self._resources = [
             {"id": '/resources/type1/resource1',
@@ -64,8 +64,7 @@ class TableStorageSimulator(TableStorage):
         :param row_key: Row key of resource
         :return: Resource if found
         """
-        task = self._data[partition_key + '-' + row_key]
-        return task
+        return self._data[partition_key + '-' + row_key]
 
     def query_list(self):
         """Get all resources in storage.
